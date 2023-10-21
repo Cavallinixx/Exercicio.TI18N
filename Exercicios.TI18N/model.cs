@@ -4,7 +4,6 @@ using System.Linq;
 using System.Runtime.Remoting.Messaging;
 using System.Text;
 using System.Threading.Tasks;
-using System.Xml.Schema;
 
 namespace ExercicioTI18N
 
@@ -34,7 +33,6 @@ namespace ExercicioTI18N
                 return false;
             }
         }//fim método
-
         public Boolean Validar(double num)
         {
             if (num < 0)
@@ -44,11 +42,11 @@ namespace ExercicioTI18N
             else
             {
                 return true;
-            }//fim validar
-        }
+            }
+        }//fim da validação
 
         //Exercicio 2 
-        public int Comparar (int num1,int num2)
+        public int Comparar(int num1, int num2)
         {
             if (num1 > num2)
             {
@@ -70,18 +68,38 @@ namespace ExercicioTI18N
         public double MultiplicarArea(int num1, int num2)
         {
             return (num1 * num2);
+
+        }
+        //Exercicio 05 - Porcentagem de votos
+        public double PorcentagemVotos(double votos, double total)
+        {
+            return (votos * 100) / total;
+        }//fim do método de porcentagem
+
+        //Exercicio 06 - Calcular o salario mais reajuste
+        public double SomarReajuste(double salario, double reajuste)
+        {
+            return salario * (reajuste / 100) + salario;
         }//fim método
+
+        //Exercicio 07 - Calcular o custo final 
+        public double CustoFinal(double porc, double custoInicial)
+        {
+            return custoInicial * (porc / 100);
+        }//fim do método 
 
         //Exercicio 08 - Salario funcionario
         public double SalarioFuncionario(double numeroCarros, double totalVendas, double salarioFixo, double valorPorCarro, double comissao, double salarioFinal)
         {
-            return (salarioFixo + (valorPorCarro * numeroCarros) + totalVendas * ( comissao/100));
+            return (salarioFixo + (valorPorCarro * numeroCarros) + totalVendas * (comissao / 100));
         }//fim do método
+
         //Exercicio 09 - Notas 
         public double MediaNotas(double nota1, double nota2, double nota3, double media)
-            { 
-                return ((media = (nota1 + nota2) /3));
-            }// fim método
-        
+        {
+            return ((media = (nota1 + nota2) / 3));
+        }// fim método
+
+
     }//fim da classe
 }//fim do projeto 
