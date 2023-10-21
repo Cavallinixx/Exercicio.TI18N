@@ -6,3 +6,10 @@ C:\Users\vitor.csouza14\source\repos\Exercicios.TI18N\Exercicios.TI18N\obj\Debug
 C:\Users\vitor.csouza14\source\repos\Exercicios.TI18N\Exercicios.TI18N\obj\Debug\Exercicios.TI18N.csproj.CoreCompileInputs.cache
 C:\Users\vitor.csouza14\source\repos\Exercicios.TI18N\Exercicios.TI18N\obj\Debug\Exercicios.TI18N.exe
 C:\Users\vitor.csouza14\source\repos\Exercicios.TI18N\Exercicios.TI18N\obj\Debug\Exercicios.TI18N.pdb
+C:\Users\vacav\source\repos\Exercicio.TI18N\Exercicios.TI18N\obj\Debug\Exercicios.TI18N.csproj.AssemblyReference.cache
+C:\Users\vacav\source\repos\Exercicio.TI18N\Exercicios.TI18N\obj\Debug\Exercicios.TI18N.csproj.CoreCompileInputs.cache
+C:\Users\vacav\source\repos\Exercicio.TI18N\Exercicios.TI18N\obj\Debug\Exercicios.TI18N.exe
+C:\Users\vacav\source\repos\Exercicio.TI18N\Exercicios.TI18N\obj\Debug\Exercicios.TI18N.pdb
+C:\Users\vacav\source\repos\Exercicio.TI18N\Exercicios.TI18N\bin\Debug\Exercicios.TI18N.exe.config
+C:\Users\vacav\source\repos\Exercicio.TI18N\Exercicios.TI18N\bin\Debug\Exercicios.TI18N.exe
+C:\Users\vacav\source\repos\Exercicio.TI18N\Exercicios.TI18N\bin\Debug\Exercicios.TI18N.pdb

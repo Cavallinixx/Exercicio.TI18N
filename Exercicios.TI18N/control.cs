@@ -38,9 +38,35 @@ namespace ExercicioTI18N
                               "7. Exercicio 07\n" +
                               "8. Exercicio 08\n" +
                               "9. Exercicio 09\n" +
+                              "10. Exercicio 10\n" +
+                              "11. Exercicio 11\n" +
+                              "12. Exercicio 12\n" +
+                              "13. Exercicio 13\n" +
+                              "14. Exercicio 14\n" +
+                              "15. Exercicio 15\n" +
+                              "16. Exercicio 16\n" +
+                              "17. Exercicio 17\n" +
+                              "18. Exercicio 18\n" +
+                              "19. Exercicio 19\n" +
+                              "20. Exercicio 20\n" +
                               "Escolha uma das opções acima: ");
             ConsultarOpcao = Convert.ToInt32(Console.ReadLine());
         }//mostrar menu
+
+        public int MenuCd()
+        {
+            Console.WriteLine("\n\n---------- Menu -------------\n" +
+                              "0. Sair\n" +
+                              "1. Verde\n" +
+                              "2. Azul\n" +
+                              "3. Amarelo\n" +
+                              "4. Vermelho\n" +
+                              "-----------------------------" +
+                              "\nEscolha um dos tipos de CD's acima: ");
+            int opcao = Convert.ToInt32((Console.ReadLine()));
+            return opcao;
+        }
+
 
         public void operacao()
         {
@@ -297,66 +323,102 @@ namespace ExercicioTI18N
                         Console.WriteLine(" O salário do funcionario é: " + exercicio.SalarioFuncionario(numeroCarros, totalVendas, salarioFixo, valorPorCarro, comissao, salarioFinal));
                         break;
                     case 9:
+                        double nota3;
 
-                        nota1 = 0;
-                        nota2 = 0;
-                        double nota3 = 0;
-                        double media = nota1 + nota2 + nota3;
+                        //Pegando as notas
+                        do
+                        {
+                            Console.WriteLine("Informe a 1° nota: ");
+                            nota1 = Convert.ToDouble(Console.ReadLine());
 
+                            if (exercicio.ValidarNotas(nota1) == true)
+                            {
+                                Console.WriteLine("Informe um valor de 0 a 10");
+                            }
+                        } while (exercicio.ValidarNotas(nota1) == true);
 
                         do
                         {
-                            Console.WriteLine(" Informe a primeira nota: ");
-                            nota1 = Convert.ToInt32(Console.ReadLine());
-                            if (exercicio.Validar(nota1) == false)
-                            {
-                                Console.WriteLine("Informe um valor positivo: ");
-                            }
+                            Console.WriteLine("Informe a 2° nota: ");
+                            nota2 = Convert.ToDouble(Console.ReadLine());
 
-                        } while (exercicio.Validar(nota1) == false);
+                            if (exercicio.ValidarNotas(nota2) == true)
+                            {
+                                Console.WriteLine("Informe um valor de 0 a 10");
+                            }
+                        } while (exercicio.ValidarNotas(nota2) == true);
 
                         do
                         {
-                            Console.WriteLine(" Informe a segunda nota: ");
-                            nota2 = Convert.ToInt32(Console.ReadLine());
-                            if (exercicio.Validar(nota2) == false)
+                            Console.WriteLine("Informe a 3° nota: ");
+                            nota3 = Convert.ToDouble(Console.ReadLine());
+
+                            if (exercicio.ValidarNotas(nota3) == true)
                             {
-                                Console.WriteLine("Informe um valor positivo:");
+                                Console.WriteLine("Informe um valor de 0 a 10");
                             }
+                        } while (exercicio.ValidarNotas(nota3) == true);
 
-                        } while (exercicio.Validar(nota2) == false);
-
-                        do
+                        //Mensagem em tela
+                        if (exercicio.MediaNotas(nota1, nota2, nota3) < 5)
                         {
-                            Console.WriteLine(" Informe a terceira nota: ");
-                            nota3 = Convert.ToInt32(Console.ReadLine());
-                            if (exercicio.Validar(nota3) == false)
-                            {
-                                Console.WriteLine("Informe um valor positivo: ");
-                            }
-
-                        } while (exercicio.Validar(nota3) == false);
-
-
-                        Console.WriteLine("Sua média foi: " + exercicio.MediaNotas(nota1, nota2, nota3, media));
-                        if (media < 5)
-                        {
-                            Console.WriteLine(" Você está de recuperação, e precisa de: " + (10 - media) + 2);
+                            Console.WriteLine("Aluno em recuperação e precisa de " + exercicio.NotaNecessaria(exercicio.MediaNotas(nota1, nota2, nota3)));
                         }
                         else
                         {
-                            Console.WriteLine((media <= 7));
-                            Console.WriteLine("Você vai para a prova final e, precisa de: " + (10 - media));
-                        }
-                        if (media <= 8)
-                        {
-                            Console.WriteLine(" Você vai para conselho");
-                        }
-                        else
-                        {
-                            Console.WriteLine("Você está aprovado!!");
+                            if (exercicio.MediaNotas(nota1, nota2, nota3) >= 5 & exercicio.MediaNotas(nota1, nota2, nota3) < 7)
+                            {
+                                Console.WriteLine("Aluno em prova final e precisa de " + exercicio.NotaNecessaria(exercicio.MediaNotas(nota1, nota2, nota3)));
+                            }
+                            else
+                            {
+                                Console.WriteLine("Você está APROVADO!!!");
+                            }
                         }
                         break;
+
+                    case 10:
+                        int opcao;
+                        do
+                        {
+                            opcao = MenuCd();//Menu para escolha dos CD's
+                            switch (opcao)
+                            {
+                                case 0:
+                                    Console.WriteLine("Obrigado!!");
+                                    break;
+                                case 1:
+                                    Console.WriteLine("R$10,00");
+                                    break;
+                                case 2:
+                                    Console.WriteLine("R$20,00");
+                                    break;
+                                case 3:
+                                    Console.WriteLine("R$30,00");
+                                    break;
+                                case 4:
+                                    Console.WriteLine("R$40,00");
+                                    break;
+                                default:
+                                    Console.WriteLine("Opção escolhida não é válida");
+                                    break;
+                            }// fim switch 
+
+                        } while (opcao != 0);
+                        break;
+                    case 11:
+                        num = 0;   
+                            Console.WriteLine(" Informe um número: ");
+                            num = Convert.ToInt32(Console.ReadLine());
+                            if (exercicio.ValidarImpar(num) == true)
+                            {
+                                Console.WriteLine(" O número escolhido é PAR");
+                            }
+                            else
+                            {
+                                Console.WriteLine(" O número esoclhido é IMPAR");
+                            }
+                        break;                     
                     default:
                         Console.WriteLine("Opção escolhida não é válida!");
                         break;
